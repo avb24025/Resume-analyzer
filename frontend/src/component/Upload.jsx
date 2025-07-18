@@ -26,7 +26,7 @@ function App() {
     try {
       setLoading(true);
       setError(null);
-      const response = await axios.post("http://localhost:3000/upload", formData);
+      const response = await axios.post(`${import.meta.env.VITE_BackendURL}/upload`, formData);
       setData(response.data);
       console.log("Response data:", response.data);
     } catch (err) {
