@@ -88,7 +88,7 @@ ${resumeText}
       });
     }
 
-    // Return the AI response as-is
+    
     res.json({
       resumeText,
       feedback: parsedJSON,
