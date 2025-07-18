@@ -11,6 +11,7 @@ const require = createRequire(import.meta.url);
 const pdfParse = require('pdf-parse');
 
 dotenv.config();
+const PORT = process.env.PORT || 3000;
 
 const app = express();
 app.use(fileUpload());
@@ -21,6 +22,6 @@ app.use(express.json());
 app.use('/api/upload', Upload_router);
 
 
-app.listen(3000, () => {
+app.listen(PORT, () => {
   console.log("Server running on http://localhost:3000");
 });
